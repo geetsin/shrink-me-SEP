@@ -1,7 +1,7 @@
 $('.btn-shorten').on('click', function(){
 
   $.ajax({
-    url: '/api/shorten',
+    url: '/api/shrink',
     type: 'POST',
     dataType: 'JSON',
     data: {url: $('#url-field').val()},
@@ -10,7 +10,7 @@ $('.btn-shorten').on('click', function(){
             + data.shortUrl + '</a>';
         $('#link').html(resultHTML);
         $('#link').hide().fadeIn('slow');
-        
+
     }
   });
 

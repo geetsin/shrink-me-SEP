@@ -20,7 +20,7 @@ app.get('/', function(req, res){
   res.sendFile(path.join(__dirname, 'views/index.html'));
 });
 
-app.post('/api/shorten', function(req, res){
+app.post('/api/shrink', function(req, res){
   var longUrl = req.body.url;
   var shortUrl = '';
 
