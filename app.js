@@ -6,6 +6,7 @@ var mongoose = require('mongoose');
 var config = require('./config');
 var base58 = require('./base58Convertor.js');
 
+const port = process.env.PORT || 3000;
 
 var Url = require('./models/url');
 
@@ -19,6 +20,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', function(req, res){
   res.sendFile(path.join(__dirname, 'views/index.html'));
 });
+
 
 app.post('/api/shrink', function(req, res){
   var longUrl = req.body.url;
@@ -70,6 +72,6 @@ app.get('/:encoded_id', function(req, res){
 
 });
 
-var server = app.listen(3000, function(){
-  console.log('Server listening on port 3000');
+var server = app.listen(port, function(){
+  console.log('Server listening on port '+ port);
 });
