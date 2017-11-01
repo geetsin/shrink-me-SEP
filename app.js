@@ -6,7 +6,7 @@ var mongoose = require('mongoose');
 var config = require('./config');
 var base58 = require('./base58Convertor.js');
 
-const port = process.env.PORT || 3000;
+const port = Number(process.env.PORT || 3000);
 
 var Url = require('./models/url');
 
