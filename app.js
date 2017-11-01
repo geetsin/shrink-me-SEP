@@ -9,9 +9,9 @@ var base58 = require('./base58Convertor.js');
 const port = Number(process.env.PORT || 3000);
 
 var Url = require('./models/url');
-
-mongoose.connect('mongodb://' + config.db.host + '/' + config.db.name);
-
+var mLabStr = "mongodb://heroku_10tr397g:G7e3e3t5@ds243285.mlab.com:43285/heroku_10tr397g";
+// mongoose.connect('mongodb://' + config.db.host + '/' + config.db.name);
+mongoose.connect(mLabStr);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
