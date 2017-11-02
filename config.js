@@ -3,10 +3,10 @@ var config = {};
 config.db = {};
 config.webhost = process.env.PORT || 'http://localhost:3000/';
 
-// config.db.host = 'localhost';
-// config.db.name = 'shrink_me';
-
 config.db.host = 'localhost';
-config.db.name = 'heroku_10tr397g';
+config.db.name = 'shrink_me';
+
+// config.db.host = 'localhost';
+// config.db.name = '';
 
 module.exports = config;

@@ -64,6 +64,11 @@ body {
   margin-top: 5px;
 }
 
+.sectionDetails {
+  display: inline;
+  padding-top: 80px;
+  width: 200px;
+}
 #link {
   display: none;
   padding-top: 15px;
